@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema
-        xmlns="http://www.lh.com/schema/myns"
+        xmlns="https://raw.githubusercontent.com/jsen-joker/data-center/master"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:beans="http://www.springframework.org/schema/beans"
         targetNamespace="https://raw.githubusercontent.com/jsen-joker/data-center/master"
@@ -29,6 +29,9 @@
         <xsd:complexType>
             <xsd:sequence maxOccurs="unbounded">
                 <xsd:element name="column">
+                    <xsd:annotation>
+                        <xsd:documentation><![CDATA[ Define a column mapper. ]]></xsd:documentation>
+                    </xsd:annotation>
                     <xsd:complexType>
                         <xsd:attribute name="local" type="xsd:string" use="required">
                             <xsd:annotation>
@@ -40,7 +43,7 @@
                                 <xsd:documentation><![CDATA[ The column name in datacenter table. ]]></xsd:documentation>
                             </xsd:annotation>
                         </xsd:attribute>
-                        <xsd:attribute name="key" type="xsd:boolean" use="required" default="false">
+                        <xsd:attribute name="key" type="xsd:boolean" use="optional" default="false">
                             <xsd:annotation>
                                 <xsd:documentation><![CDATA[ If this column use as a business key. ]]></xsd:documentation>
                             </xsd:annotation>
@@ -50,7 +53,7 @@
                                 <xsd:documentation><![CDATA[ When record be inserted, the replace rule, eg. replace, ignore, sum. ]]></xsd:documentation>
                             </xsd:annotation>
                         </xsd:attribute>
-                        <xsd:attribute name="group" type="xsd:string" use="required" default="g1">
+                        <xsd:attribute name="group" type="xsd:string" use="optional" default="g1">
                             <xsd:annotation>
                                 <xsd:documentation><![CDATA[ The column belong, not used yet. ]]></xsd:documentation>
                             </xsd:annotation>
