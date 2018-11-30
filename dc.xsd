@@ -3,7 +3,7 @@
         xmlns="http://www.lh.com/schema/myns"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:beans="http://www.springframework.org/schema/beans"
-        targetNamespace="https://raw.githubusercontent.com/jsen-joker/data-center/master/dc.xsd"
+        targetNamespace="https://raw.githubusercontent.com/jsen-joker/data-center/master"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified" >
     <xsd:import namespace="http://www.springframework.org/schema/beans" />
